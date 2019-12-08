@@ -1,0 +1,57 @@
+function warehouse_start() {
+    local USER="$AWS_PROFILE"
+
+    user-tp
+    aws ec2 start-instances --instance-ids i-02a85cb6436811a08
+
+    [[ "$USER" == "grubhub" ]] && user-gh
+}
+
+function warehouse_stop() {
+    local USER="$AWS_PROFILE"
+    user-tp
+    aws ec2 stop-instances --instance-ids i-02a85cb6436811a08
+
+    [[ "$USER" == "grubhub" ]] && user-gh
+}
+
+function warehouse_connect() {
+    local USER="$AWS_PROFILE"
+    user-tp
+    ssh -i ~/.keys/yarden.pem ubuntu@10.0.1.123
+
+    [[ "$USER" == "grubhub" ]] && user-gh
+}
+
+function deliveryrouting_connect() {
+    local USER="$AWS_PROFILE"
+    user-tp
+    ssh -i ~/.keys/yarden.pem ubuntu@192.168.5.41
+
+    [[ "$USER" == "grubhub" ]] && user-gh
+}
+
+function deliveryrouting_status() {
+    local USER="$AWS_PROFILE"
+    user-tp
+    aws ec2 describe-instances --instance-ids i-086d5220aa539c934 | grep -m2 Name | tail -n1
+
+    
+    [[ "$USER" == "grubhub" ]] && user-gh
+}
+
+function warehouse_status() {
+    local USER="$AWS_PROFILE"
+    user-tp
+    aws ec2 describe-instances --instance-ids i-02a85cb6436811a08 | grep -m2 Name | tail -n1
+
+    [[ "$USER" == "grubhub" ]] && user-gh
+}
+
+function get_params() {
+    garcli fig get-all-params -e preprod --service grouter --system managed_delivery --version $1 --username gslonim@grubhub.com
+}
+
+function set_param() {
+    garcli fig set-param -e preprod --system managed_delivery  --service grouter --version $1 --param $2 --value $3 --username gslonim@grubhub.com --runtime
+}

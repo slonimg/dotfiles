@@ -1,0 +1,17 @@
+# Aliases
+alias jn=jupyter-notebook\ --notebook-dir=/Users/g/Projects/jupyter
+alias -s {.zshrc,.zsh}=vim
+alias -s {.yml,.yaml,.json,.js,.xml}=vim
+alias dircolors=gdircolors
+alias zshcfg=vim\ ~/.zshrc
+alias s=git\ status
+
+# tmux
+alias lss=tmux\ ls
+
+#vimgo
+alias vimgo='vim -u ~/.vimrc.go'
+
+# colorsls autocomplete
+alias lc='colorls -lA --sd'
+
