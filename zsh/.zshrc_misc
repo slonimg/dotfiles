@@ -1,4 +1,4 @@
-function warehouse_start() {
+function warehouse_up() {
     local USER="$AWS_PROFILE"
 
     user-tp
@@ -7,7 +7,7 @@ function warehouse_start() {
     [[ "$USER" == "grubhub" ]] && user-gh
 }
 
-function warehouse_stop() {
+function warehouse_down() {
     local USER="$AWS_PROFILE"
     user-tp
     aws ec2 stop-instances --instance-ids i-02a85cb6436811a08
