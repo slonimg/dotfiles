@@ -21,3 +21,5 @@ alias sssh='ssh -o CheckHostIP=no -o StrictHostKeyChecking=no -o UserKnownHostsF
 # restart and halt from command line
 alias reboot='sudo shutdown -r now reboot'
 alias poweroff='sudo shutdown -h now poweroff halt'
+
+alias jkill='for p in $(pgrep java); do kill -9 $p; done; ccm start; ccm status'
