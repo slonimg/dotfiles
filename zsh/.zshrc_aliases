@@ -17,9 +17,12 @@ alias lc='colorls -lA --sd'
 
 # ssh without adding to known_hosts 
 alias sssh='ssh -o CheckHostIP=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.keys/yarden.pem '
+alias sscp='scp -o CheckHostIP=no -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.keys/yarden.pem '
 
 # restart and halt from command line
 alias reboot='sudo shutdown -r now reboot'
 alias poweroff='sudo shutdown -h now poweroff halt'
 
+# shell tricks
 alias jkill='for p in $(pgrep java); do kill -9 $p; done; ccm start; ccm status'
+alias cls="clear && printf '\e[3J'"
