@@ -1,20 +1,24 @@
-# TMUX 
+function sourcefile {
+    if [ -f $1 ]; then
+        source $1
+    fi
+}
+
+# TMUX
 if [[ $TMUX = "" ]]; then
   # try to reattach sessions
   tmux ls | grep -vq attached && TMUXARG="attach-session -d"
   exec eval "tmux -2 $TMUXARG"
 fi
 
-source ~/.dotfiles/zsh/.env
-source ~/.dotfiles/zsh/.oh-my-zsh
-
-
 # add command start time
 preexec() { date }
 
-source /Users/g/.rvm/gems/ruby-2.4.6/gems/colorls-1.2.0/lib/tab_complete.sh
-
-source ~/.dotfiles/zsh/.zshrc_aliases
-source ~/.dotfiles/zsh/.zshrc_users
-source ~/.dotfiles/zsh/.zshrc_misc
+sourcefile ~/.dotfiles/zsh/.env
+sourcefile ~/.dotfiles/zsh/.oh-my-zsh
+sourcefile ~/.rvm/gems/ruby-2.4.6/gems/colorls-1.2.0/lib/tab_complete.sh
+sourcefile ~/.dotfiles/zsh/.zshrc_aliases
+sourcefile ~/.dotfiles/zsh/.zshrc_users
+sourcefile ~/.dotfiles/zsh/.zshrc_misc
+sourcefile ~/.fzf.zsh
 

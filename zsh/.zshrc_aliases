@@ -1,5 +1,5 @@
 # Aliases
-alias jn=jupyter-notebook\ --notebook-dir=/Users/g/Projects/jupyter
+alias jn=jupyter-notebook\ --notebook-dir="$HOME/Projects/jupyter"
 alias -s {.zshrc,.zsh}=vim
 alias -s {.yml,.yaml,.json,.js,.xml}=vim
 alias dircolors=gdircolors
