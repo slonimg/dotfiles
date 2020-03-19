@@ -26,3 +26,24 @@ alias poweroff='sudo shutdown -h now poweroff halt'
 # shell tricks
 alias jkill='for p in $(pgrep java); do kill -9 $p; done; ccm start; ccm status'
 alias cls="clear && printf '\e[3J'"
+
+# show function code
+alias fun="whence -f"
+
+# projects - env PROJECTS_DIR
+# navigate to projects folder 
+function proj() {
+    if [[ $# -eq 0 ]]
+        then
+            echo "please supply project name"
+            return
+        fi
+
+        DIR=$(ls $PROJECTS_DIR | grep $1 | head -n 1)
+        if ls $PROJECTS_DIR | grep $1 | head -n 1
+        then
+            pushd $PROJECTS_DIR/$DIR
+        else
+            echo "no proejct named $1 found"
+        fi
+}

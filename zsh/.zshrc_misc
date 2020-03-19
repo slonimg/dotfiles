@@ -48,10 +48,17 @@ function warehouse_status() {
     [[ "$USER" == "grubhub" ]] && user-gh
 }
 
-function get_params() {
+function get_grouter_params() {
     garcli fig get-all-params -e preprod --service grouter --system managed_delivery --version $1 --username gslonim@grubhub.com
 }
 
-function set_param() {
+function set_grouter_param() {
     garcli fig set-param -e preprod --system managed_delivery  --service grouter --version $1 --param $2 --value $3 --username gslonim@grubhub.com --runtime
+}
+
+function get_pathfinder_params() {
+    garcli fig get-all-params -e preprod --service pathfinder --system managed_delivery --version $1 --username gslonim@grubhub.com
+}
+function set_pathfinder_param() {
+    garcli fig set-param -e preprod --system managed_delivery  --service pathfinder --version $1 --param $2 --value $3 --username gslonim@grubhub.com --runtime
 }

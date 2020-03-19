@@ -18,6 +18,7 @@ sourcefile ~/.dotfiles/zsh/.env
 sourcefile ~/.dotfiles/zsh/.oh-my-zsh
 sourcefile ~/.rvm/gems/ruby-2.4.6/gems/colorls-1.2.0/lib/tab_complete.sh
 sourcefile ~/.dotfiles/zsh/.zshrc_aliases
+sourcefile ~/.dotfiles/zsh/.zshrc_aliases_for_work
 sourcefile ~/.dotfiles/zsh/.zshrc_users
 sourcefile ~/.dotfiles/zsh/.zshrc_misc
 sourcefile ~/.fzf.zsh
