@@ -47,3 +47,10 @@ function proj() {
             echo "no proejct named $1 found"
         fi
 }
+
+# dotiles configurations
+alias dotfiles='cd $DOTFILES_DIR'
+alias dotzsh='vim $DOTFILES_DIR/zsh/.zshrc'
+alias dotenv='vim $DOTFILES_DIR/zsh/.env'
+alias dotalias='vim $DOTFILES_DIR/zsh/.zshrc_aliases'
+alias dotmisc='vim $DOTFILES_DIR/zsh/.zshrc_misc'
