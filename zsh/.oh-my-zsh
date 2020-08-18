@@ -79,12 +79,12 @@ plugins=(
     tmux
     command-time
     fzf
-#    zsh-dircolors-solarized
-    #auto-color-ls
     colored-man-pages
     zsh-syntax-highlighting
+    conda-zsh-completion
 )
 
+autoload -U compinit && compinit
 autoload -U zsh-mime-setup
 source $ZSH/oh-my-zsh.sh
 
