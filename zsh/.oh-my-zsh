@@ -80,6 +80,7 @@ plugins=(
     command-time
     fzf
     colored-man-pages
+    kubectl
     zsh-syntax-highlighting
     conda-zsh-completion
 )

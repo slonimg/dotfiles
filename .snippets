@@ -1,0 +1,4 @@
+for f in $(ll | grep csv | awk '{print $9}'); do aws s3 cp $f s3://some/path/$f; done
+for f in $(ll prefix_* | awk '{print $9}'); do echo "aws s3 cp $f s3://some/path/$f"; done | wc -l
+for f in $(ps -eax | grep "java "); do  echo $f | awk '{ print ( }'; done' ) }'
+for p in $(pgrep java); do kill -9 $p; done

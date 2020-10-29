@@ -5,6 +5,7 @@ alias -s {.yml,.yaml,.json,.js,.xml}=vim
 alias dircolors=gdircolors
 alias zshcfg=vim\ ~/.zshrc
 alias s=git\ status
+alias k=kubectl
 
 # tmux
 alias lss=tmux\ ls
