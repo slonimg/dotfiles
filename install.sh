@@ -13,7 +13,6 @@ git clone https://github.com/popstas/zsh-command-time.git ~/.oh-my-zsh/custom/pl
 # Syntax Highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-
 # setup zsh configurations
 pushd ~
 cp .zshrc .zshrc_backup
@@ -31,6 +30,20 @@ ln -s -f .dotfiles/tmux/.tmux.conf.local .tmux.conf.local
 #setup vim configuration
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
+
+# setup conda zsh completions
+git clone https://github.com/esc/conda-zsh-completion ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/conda-zsh-completion
+
+
+# install powerline patched fonts
+git clone https://github.com/powerline/fonts.git --depth=1
+# install
+cd fonts
+./install.sh
+# clean-up a bit
+cd ..
+rm -rf fonts
+
 
 
 popd
