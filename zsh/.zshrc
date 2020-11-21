@@ -15,6 +15,7 @@ fi
 preexec() { date }
 
 sourcefile ~/.dotfiles/zsh/.env
+sourcefile ~/.dotfiles/zsh/.env_work
 sourcefile ~/.dotfiles/zsh/.oh-my-zsh
 sourcefile ~/.rvm/gems/ruby-2.4.6/gems/colorls-1.2.0/lib/tab_complete.sh
 sourcefile ~/.dotfiles/zsh/.zshrc_aliases
