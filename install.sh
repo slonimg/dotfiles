@@ -44,6 +44,10 @@ cd fonts
 cd ..
 rm -rf fonts
 
+# Add powerlevel10k to the list of Oh My Zsh themes.
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+# Replace ZSH_THEME="powerlevel9k/powerlevel9k" with ZSH_THEME="powerlevel10k/powerlevel10k".
+sed -i.bak 's/powerlevel9k/powerlevel10k/g' ~/.zshrc
 
 
 popd
