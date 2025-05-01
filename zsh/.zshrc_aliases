@@ -56,3 +56,4 @@ alias dotenv='vim $DOTFILES_DIR/zsh/.env'
 alias dotalias='vim $DOTFILES_DIR/zsh/.zshrc_aliases'
 alias dotmisc='vim $DOTFILES_DIR/zsh/.zshrc_misc'
 
+alias ll='ls -lah'
