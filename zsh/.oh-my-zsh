@@ -72,16 +72,11 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(
     aws
     git
-    cargo
     brew
-    docker
-    jira
-    osx
     tmux
     command-time
     fzf
     colored-man-pages
-    kubectl
     zsh-syntax-highlighting
     conda-zsh-completion
 )
